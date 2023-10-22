@@ -502,28 +502,39 @@ footer{
 /*END OF FOOTER*/
 
 /*PORTFOLIO*/
+
 .main-portfolio {
     width: 1440px;
 }
 
 .portfolio-buttons {
-    display: inline-flex;
-    padding-bottom: 50px;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    text-align: center;
     gap: 24px;
-    margin-left: 30%;
+    margin-left:30%    
 }
 
-.portfolio-buttons .active:hover,
-.portfolio-buttons .active:focus {
+.portfolio-buttons .point:hover,
+.portfolio-buttons .point:focus {
     display: flex;
     padding: 12px 24px;
     align-items: flex-start;
-    color: var(--WHITE);
+
     border-radius: 4px;
-    background: var(--OCEAN);
+    background: var(--OCEAN, #404BBF);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+
+    color: var(--WHITE, #FFF);
+    text-align: center;
+    /* Button Text */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
 }
 
 .filter-btn {
@@ -543,8 +554,7 @@ footer{
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
-    /* 150% */
+    line-height: 24px;    /* 150% */
     letter-spacing: 0.64px;
 }
 
@@ -554,20 +564,7 @@ footer{
     display: flex;
     gap: 24px;
     list-style: none;
-    margin-left: ;
-
 }
-
-.proj-card li {
-    border: 1px solid var(--CORNFLOWER, #E7E9FC);
-    background: var(--WHITE, #FFF);{
-}
-
-.proj-card li img {
-    width: 100%;
-    display:block;
-}
-
 
 .proj-card-content {
     display: flex;
@@ -577,9 +574,9 @@ footer{
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
-    padding: 0px 16px;
+    padding: 40px 32px;
     gap: 8px;
-    
+
 }
 
 .proj-card-content h3 {
@@ -608,26 +605,34 @@ footer{
 
 .proj-image {
     position: relative;
+    overflow: hidden;
+}
+
+.proj-image img {
+    width: 100%;
+    display: block;
+}
+
+.projs-image-overlay p {
+    padding: 40px 32px;
 }
 
 .projs-image-overlay {
     position: absolute;
-    background-color: var(--IRIS, #4D5AE5);
+    background-color: rgba(77, 90, 229, 0.7);
     color: var(--WHITE);
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
+    transition: .5s ease;
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.projs-image-overlay p{
-    padding: 40px 32px;
-}
-
-.projs:hover .projs-image-overlay{
+.projs:hover .projs-image-overlay {
     opacity: 1;
+    transform: translateY(0);
 }
-
-/*END OF PORTFOLIO*/
-
