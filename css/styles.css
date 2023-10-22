@@ -54,7 +54,7 @@ a {
 .page-header {
     display: flex;
     width: 1158px;
-    height: 72px;
+    height: 75px;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -92,6 +92,17 @@ a {
 
 .active {
     color: var(--OCEAN);
+}
+
+.active::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--IRIS);
+    position:relative;
+    top: 09px;
 }
 
 .contact-info-item {
@@ -552,6 +563,12 @@ footer{
     background: var(--WHITE, #FFF);{
 }
 
+.proj-card li img {
+    width: 100%;
+    display:block;
+}
+
+
 .proj-card-content {
     display: flex;
     padding: 0px 16px;
@@ -564,7 +581,6 @@ footer{
     gap: 8px;
     
 }
-
 
 .proj-card-content h3 {
     color: var(--NAVY-BLUE, #2E2F42);
@@ -588,6 +604,29 @@ footer{
     line-height: 24px;
     /* 150% */
     letter-spacing: 0.32px;
+}
+
+.proj-image {
+    position: relative;
+}
+
+.projs-image-overlay {
+    position: absolute;
+    background-color: var(--IRIS, #4D5AE5);
+    color: var(--WHITE);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.projs-image-overlay p{
+    padding: 40px 32px;
+}
+
+.projs:hover .projs-image-overlay{
+    opacity: 1;
 }
 
 /*END OF PORTFOLIO*/
