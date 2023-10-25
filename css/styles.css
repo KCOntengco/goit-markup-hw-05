@@ -129,6 +129,9 @@ a {
 .main {
     width: 1158px;
     height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dark-bg {
@@ -184,6 +187,35 @@ a {
     color: var(--WHITE);
     padding: 16px 32px;
     color: var(--OCEAN);
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    height: 100%
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: :center;
+    justify-content: center;
+}
+
+.data-modal {
+    background-color: #FFF;
+    width: 408px;
+    height: 584px;
+}
+
+.data-modal-close {
+    width: 24px;
+    height: 24px;
+   
+   
+}
+
+.is-hidden {
+    visibility: hidden;
 }
 
 /*END OF DARK-BG SECTION*/
