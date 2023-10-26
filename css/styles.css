@@ -189,51 +189,7 @@ a {
     color: var(--OCEAN);
 }
 
-.backdrop {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.is-hidden {
-    pointer-events: none;
-    opacity: 0;
-}
-
-.modal {
-    width: 408px;
-    height: 584px;
-    background-color: white;
-    border-radius: 4px;
-    padding: 24px;
-}
-
-.modal-close-btn:hover {
-    fill: currentColor;
-    border: 1px solid currentColor;
-}
-
-.modal-close-btn {
-    border-radius: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    color: var(--ocean);
-    margin-left: auto;
-    display: block;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
 /*END OF DARK-BG SECTION*/
@@ -288,9 +244,53 @@ a {
 
     border-radius: 4px;
     background: var(--CLOUD, #F4F4FD);
-
 }
 
+.modal {
+    width: 408px;
+    height: 584px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 24px;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    color: var(--OCEAN);
+    margin-left: auto;
+    display: block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close-btn:hover { 
+    fill: currentColor;
+    border: 1px solid currentColor;
+}
+
+.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+}
 
 /*END OF MAIN FEATURE*/
 
@@ -299,6 +299,7 @@ a {
 .main-service {
     width: 1440px;
     background: #FFF;
+    
 }
 
 .section-title {
